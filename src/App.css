@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(159, 216, 243, 0.452);
+}
+
+.app {
+
+  border: none;
+  box-shadow: 3px 3px 3px 3px rgb(182, 182, 182);
+  border-radius: 2em;
+  background-color: white;
+
+  width: 600px;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  width: 600px;
+  height: 120px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120px;
+}
+
+.contentWrapper {
+  width: 600px;
+}
+
+.todolists {
+  width: 600px;
+  height: 800px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  overflow: scroll;
+}
+
+.todolist{
+  width: 600px;
+  height: 800px;
+
+  display: flex;  
   flex-direction: column;
   align-items: center;
+}
+
+.boxlink {
+  text-decoration: none;
+  color: black;
+}
+
+.todobox {
+  width: 250px;
+  height: 250px;
+  padding: 8px;
+}
+
+.footer {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: -10px;
+}
+
+.box {
+  font-size: 30px;
+
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  background-color: rgb(236, 236, 236);
+  border-radius: 1em;
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
+}
+
+.box_delete {
+
+  position: relative;
+  
+  font-size: 30px;
+
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(32, 32, 32);
   color: white;
+  border-radius: 1em;
+
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
 }
 
-.App-link {
-  color: #61dafb;
+.delete_btn {
+
+  font-weight: bold;
+
+  position: absolute;
+  top: -20px;
+  left: -20px;
+
+  width: 50px;
+  height: 50px;
+  background-color: rgba(212, 118, 132, 0.6);
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  line-height: 45px;
+
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#box_date {
+  font-weight: bold;
+  width: 180px;
+  height: 50px;
+}
+
+#todo {
+  width: 180px;
+  height: 25px;
+}
+
+#plus {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+#cancel {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+#trashcan {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+#header_date {
+  font-size: 40px;
+  padding-bottom: 80px;
+}
+
+.inputbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100px;
+}
+
+#todo_input {
+  margin: 10px;
+  width: 350px;
+  height: 50px;
+
+  font-size: 30px;
+
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
+}
+
+#add_btn {
+  margin: 10px;
+  width: 100px;
+  height: 55px;
+
+  background-color: rgb(58, 118, 248);
+  color: white;
+  font-size: 30px;
+
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
+}
+
+.lists {
+  list-style:none;
+  padding-left:0px;
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  padding: 10px;
+  font-size: 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#list_text {
+  width: 350px;
+  height: 50px;
+  border-radius: 50px;
+  border: solid gainsboro;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 15px;
+
+  border: none;
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
+}
+
+.checked_btn {
+
+  margin-right: 10px;
+
+  width: 50px;
+  height: 50px;
+  background-color: rgba(204, 202, 202, 0.6);
+  border-radius: 2em;
+  font-size: 50px;
+
+  display: flex;
+  justify-content: center;
+  line-height: 1em;
+
+  border: none;
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
+}
+
+.delete_btn2 {
+
+  margin-left: 10px;
+
+  width: 50px;
+  height: 50px;
+  background-color: rgba(212, 118, 132, 0.6);
+  border-radius: 2em;
+  font-size: 32px;
+
+  border: none;
+  box-shadow: 0px 2px 2px 2px rgb(182, 182, 182);
+
 }

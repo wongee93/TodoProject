@@ -1,0 +1,22 @@
+{
+  "todolist": [
+    {
+      "date": "22/10/18",
+      "body": "React 강의 듣기",
+      "checked": true,
+      "id": 1
+    },
+    {
+      "date": "22/10/18",
+      "body": "회고 블로그 작성하기",
+      "checked": true,
+      "id": 2
+    },
+    {
+      "date": "22/10/18",
+      "body": "Redux 개념학습",
+      "checked": true,
+      "id": 3
+    }
+  ]
+}
